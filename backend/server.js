@@ -8,7 +8,7 @@ const connectDB = require("./config/db");
 const app = express();
 const server = http.createServer(app);
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors());
 app.use(express.json());
 
 const io = new Server(server, {
